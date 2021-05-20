@@ -13,8 +13,8 @@ cd node_exporter-1.1.2.linux-amd64/
 ./node_exporter &
 
 cd
-git clone -b docker https://github.com/MaxleyCv/databases-spring
-cd /home/maxim_lish/projects/databases-spring
+git clone https://github.com/MaxleyCv/databases-spring
+cd databases-spring/
 mvn install
 mvn clean package
 mvn spring-boot:run

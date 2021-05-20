@@ -1,20 +1,22 @@
 version: '3'
 services:
-  mysql-database:
+  mylaba:
     image: "mysql:latest"
     volumes:
       - /var/lib/docker/volumes/mysql-db:/var/lib/mysql-db
     environment:
       - MYSQL_DATABASE=leszczynski
       - MYSQL_ROOT_PASSWORD=P4r4d0x!
-      - MYSQL_HOST=maxroot
-  java-web:
+      - MYSQL_HOST=mylaba
+      - MYSQL_USER=maxroot
+      - MYSQL_PASSWORD=P4r4d0x!
+  havonagila:
     image: "ubuntu:bionic"
     restart: on-failure
     depends_on:
-      - mysql-database
+      - mylaba
     environment:
-      - DATABASE_HOST=mysql-database
+      - DATABASE_HOST=mylaba
       - DATABASE_USER=maxroot
       - DATABASE_PASSWORD=P4r4d0x!
       - DATABASE_NAME=leszczynski

@@ -1,1 +1,1 @@
-docker logs --follow git_lab6app_1 --tail 75
+docker logs --follow serverside_havonagila_1 --tail 75
